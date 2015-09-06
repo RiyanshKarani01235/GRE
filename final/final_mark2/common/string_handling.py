@@ -62,19 +62,25 @@ def is_alphabet(character) :
         return True
     return False
 
+def is_number(character) : 
+	i = char_to_int(character) 
+	if((i>47) and (i<58)) : 
+		return True
+	return False
+
 def get_word(string,n,category) :
     array = []
     i = 0
     if(category == 'remove symbols') :
         while(i<len(string)) :
             string_ = ''
-            while(not(is_alphabet(string[i]))) :
+            while((not(is_alphabet(string[i]))) and (not(is_number(string[i])))):
                 i += 1
                 if(i>= len(string)) :
                     break
             if(i>= len(string)) :
                     break
-            while(is_alphabet(string[i])) :
+            while((is_alphabet(string[i])) or (is_number(string[i]))) :
                 string_ += string[i]
                 i += 1
                 if(i>= len(string)) :
