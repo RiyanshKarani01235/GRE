@@ -16,7 +16,7 @@ diffident(Adjective) : lacking self confidence (diffi|dent --> difficult to be c
 
 trite(Adjective) : mundane;
 
-platitude(Noun) : obvious remark;
+platitude(Noun) : a remark, especially one with a moral content, which has been used too often to be interesting or thou;
 
 aesthetic(Adjective) : concerned with apperciation of external beauty;
 
@@ -26,7 +26,7 @@ inexorable(Adjective) : impossible to prevent (Can not ex-or with);
 
 frivolous(Adjective) : not serious in content/attitude (fri|volous --> free will --> when you are free, you don't take things seriously);
 
-superfluous(Adjective) : superficial/serving no real purpose;
+superfluous(Adjective) : superficial/serving no real purpose, especially due to being in excess;
 
 prescience(Noun) : the power to foresee the future (pre|science --> before science can know);
 
@@ -42,13 +42,13 @@ fortuitous(Adjective) : occuring with happy chance;
 
 decorous(Adjective) : characterized by good taste in mannsers and conduct (when you decorate yourself properly --> good manners);
 
-culpability(Noun) : a state of guilt (culp ~ gulp --> you gulp when you have made a mistak);
+culpability(Noun) : a state of guilt, because of having done something wrong (culp ~ gulp --> you gulp when you have made a mistak);
 
 meticulous(Adjective) : marked by careful attitude towards things;
 
 prediliction(Noun) : Strong liking (~dilation --> Irene Adler's pupils dilated because she strongly liked Sherlock);
 
-mawkish(Adjective) : overly sentimental (maw|kish --> maa ki kiss --> overly sentimental);
+mawkish(Adjective) : overly sentimental, up to the point that it becomes disgusting (maw|kish --> maa ki kiss --> overly sentimental);
 
 gainsay(Verb) : speak against (gain|Say --> say against);
 
@@ -76,13 +76,13 @@ banal(Adjective) : mundane;
 
 recondite(Adjective) : difficult to comprehend/understand (erudite);
 
-torpor(Noun) : inactivity resulting from enervation;
+torpor(Noun) : inactivity resulting from enervation (~torrent|par --> due to a lot of leachers {who enervate the service}, the download of movie becomes slow or inactive);
 
 gossamer(Adjective) : characterized by lightness and delecacy (Gauss --> opposite to how Gauss looked);
 
 gall(Adjective) : trait of being rude or impertinent (gall bladder);
 
-obscure(Verb) : make unclear (obs|cure --> obstruct clarity);
+obscure(Verb) : make unclear / not discovered or not known about (obs|cure --> obstruct clarity);
 
 germane(Adjective) : relavant and appropriate;
 
@@ -96,6 +96,8 @@ apathetic(Adjective) : marked by lack of interest/indifference;
 
 exacerbate(Verb) : Make it worse ();
 
-perfidity(Noun) : An act of delibrate betrayal();
+perfidy(Noun) : An act of delibrate betrayal(lacking fidelity --> lacking faithfulness);
+
+fidelity(Noun) : faithfulness;
 
 entrenched(Adjective) : fixed firmly or securely();

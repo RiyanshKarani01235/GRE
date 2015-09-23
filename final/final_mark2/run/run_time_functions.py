@@ -1,4 +1,7 @@
 import pkg_resources
+import random
+import time
+
 from final_mark2.common.string_handling import *
 from final_mark2.run.directory_handling import is_file_in_directory
 
@@ -35,48 +38,107 @@ def dictionary(_list_,dictionary) :
 			print('exiting')
 			print('-----------------------------------')
 			print()
-			main()
 		else :
 			print('word not available')
 
 def test(_list_,dictionary) : 
 
-	def get_input() : 
-		answer = input('do you want to merge the two log files ? ')
-		if(answer == 'yes') : 
-			return True
-		elif(answer == 'no') : 
-			return False 
-		else : 
-			print('invalid response, please try again')
-			return(get_input())
-
 	global LIST
 	global DICTIONARY
 	LIST = _list_
 	DICTIONARY = dictionary
-	test_log = open('test_log','r+')
-	test_log_ = test_log.read()
-	test_log.close()
-	test_log = test_log_
-	del(test_log_)
-	if(is_nothing_in_file(test_log)) : 
-		print('building empty log ...')
-		build_empty_log()
-	if(is_file_in_directory(other_log_file,working_directory)) :
-		print('android test log also present')
-		log_file = is_file_in_directory(other_log_file,working_directory)
-		print(log_file)
-		answer = get_input()
-		if(answer) : 
-			print('merging log files ...')
-			#merge_log_files(log_file)
-			#after merging log files, delete the android_test_log
-		else : 
-			print('merging aborted')
 
-	else : 
-		print('android test log not found')
+	not_answered_words = _list_
+	answered_words = []
+
+	def test_one_word() : 
+
+		print('----------------------------------------------------')
+
+		random_word_index = random.randint(0,len(not_answered_words)-1)
+		random_word = not_answered_words[random_word_index]
+		print(random_word[0][0])
+
+		def get_input(string) : 
+			try : 
+				_input = input(string)
+			except TypeError : 
+				return get_input(string)
+			if _input is 'y' : 
+				return False
+			if _input is 'n' : 
+				return True
+			else : 
+				return get_input(string)
+
+		input_ = input('press enter to see the meaning ')
+		print('the answer was : ' + str(random_word[2]))
+		# answered_words.append(not_answered_words.pop(random_word_index))
+		_input = get_input('did you know the meaning of this word ? y/n ')
+		# print(_input)
+		if(not _input) : 
+			# print('y pressed be ')
+			# print('the answer was : ' + str(random_word[2]))
+			answered_words.append(not_answered_words.pop(random_word_index))
+
+		else :
+			empty_list = [[],'',['']]
+			if random_word[3] in empty_list : 
+				print('hint not available')
+			else : 
+				print('hint :',str(random_word[3]))
+
+		# print('----------------------------------------------------')
+
+	while len(not_answered_words) is not 0 : 
+		test_one_word()
+	for i in range(3) : 
+		print()
+		
+	print('+-----------------------------------------------------------------+')
+	print('|                                                                 |')
+	print('|          CONGRATULATIONS, YOU HAVE COMPLETED THE TEST           |')
+	print('|                                                                 |')
+	print('+-----------------------------------------------------------------+')
+
+		# print(len(not_answered_words))
+
+	# def get_input() : 
+	# 	answer = input('do you want to merge the two log files ? ')
+	# 	if(answer == 'yes') : 
+	# 		return True
+	# 	elif(answer == 'no') : 
+	# 		return False 
+	# 	else : 
+	# 		print('invalid response, please try again')
+	# 		return(get_input())
+
+	# global LIST
+	# global DICTIONARY
+	# LIST = _list_
+	# DICTIONARY = dictionary
+	# test_log = open('test_log','r+')
+	# test_log_ = test_log.read()
+	# test_log.close()
+	# test_log = test_log_
+	# del(test_log_)
+	# if(is_nothing_in_file(test_log)) : 
+	# 	print('building empty log ...')
+	# 	build_empty_log()
+	# if(is_file_in_directory(other_log_file,working_directory)) :
+	# 	print('android test log also present')
+	# 	log_file = is_file_in_directory(other_log_file,working_directory)
+	# 	print(log_file)
+	# 	answer = get_input()
+	# 	if(answer) : 
+	# 		print('merging log files ...')
+	# 		#merge_log_files(log_file)
+	# 		#after merging log files, delete the android_test_log
+	# 	else : 
+	# 		print('merging aborted')
+
+	# else : 
+	# 	print('android test log not found')
 
 def build_empty_log() : 
 	word_list = []
