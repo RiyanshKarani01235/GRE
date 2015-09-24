@@ -51,6 +51,19 @@ def test(_list_,dictionary) :
 	not_answered_words = _list_
 	answered_words = []
 
+	review = pkg_resources.resource_filename('final_mark2.words','review words')
+	
+	def write_to_review(string_) :
+		already = '' 
+		with open(review,'r') as r:
+			already += r.read()
+		with open(review,'w') as r : 
+			r.write(already)
+			r.write(string_)
+			r.write('\n')
+	
+	write_to_review('------------  ' + time.strftime('%x') + '  ' + time.strftime('%H:%M:%S') + '  ------------')
+
 	def test_one_word() : 
 
 		print('----------------------------------------------------')
@@ -82,6 +95,7 @@ def test(_list_,dictionary) :
 			answered_words.append(not_answered_words.pop(random_word_index))
 
 		else :
+			write_to_review(random_word[0][0])
 			empty_list = [[],'',['']]
 			if random_word[3] in empty_list : 
 				print('hint not available')
