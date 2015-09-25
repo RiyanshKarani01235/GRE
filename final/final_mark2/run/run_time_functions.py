@@ -59,14 +59,15 @@ def test(_list_,dictionary) :
 			already += r.read()
 		with open(review,'w') as r : 
 			r.write(already)
-			r.write(string_)
-			r.write('\n')
+			if string_ not in already : 
+				r.write(string_)
+				r.write('\n')
 	
 	write_to_review('------------  ' + time.strftime('%x') + '  ' + time.strftime('%H:%M:%S') + '  ------------')
 
 	def test_one_word() : 
 
-		print('----------------------------------------------------')
+		print('--------------------  ' + str(len(not_answered_words)) + '  --------------------')
 
 		random_word_index = random.randint(0,len(not_answered_words)-1)
 		random_word = not_answered_words[random_word_index]
