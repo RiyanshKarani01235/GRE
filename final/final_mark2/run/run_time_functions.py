@@ -53,15 +53,22 @@ def test(_list_,dictionary) :
 
 	review = pkg_resources.resource_filename('final_mark2.words','review words')
 	
+	already_wrong_words = []
+	already_wrong_words_count = []
+
 	def write_to_review(string_) :
 		already = '' 
 		with open(review,'r') as r:
 			already += r.read()
 		with open(review,'w') as r : 
 			r.write(already)
-			if string_ not in already : 
+			if string_ not in already_wrong_words : 
+				already_wrong_words.append(string_)
+				already_wrong_words_count.append(0)
 				r.write(string_)
 				r.write('\n')
+			else : 
+				already_wrong_words_count[already_wrong_words.index(string_)] = 0
 	
 	write_to_review('------------  ' + time.strftime('%x') + '  ' + time.strftime('%H:%M:%S') + '  ------------')
 
@@ -93,7 +100,13 @@ def test(_list_,dictionary) :
 		if(not _input) : 
 			# print('y pressed be ')
 			# print('the answer was : ' + str(random_word[2]))
-			answered_words.append(not_answered_words.pop(random_word_index))
+			if random_word[0][0] in already_wrong_words : 
+				if already_wrong_words_count[already_wrong_words.index(random_word[0][0])] is 3 :
+					answered_words.append(not_answered_words.pop(random_word_index))
+				else : 
+					already_wrong_words_count[already_wrong_words.index(random_word[0][0])] += 1
+			else : 
+				answered_words.append(not_answered_words.pop(random_word_index))
 
 		else :
 			write_to_review(random_word[0][0])
