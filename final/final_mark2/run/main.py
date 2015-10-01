@@ -21,7 +21,7 @@ DICTIONARY = {}
 
 def setup() :
 	
-	FLAG = 0
+	FLAG = 0 #if flag is 0 , magoosh words
 	
 	w = ''
 
@@ -30,13 +30,14 @@ def setup() :
 	if FLAG is 0 :
 
 		word_lists = ['common words 1', 'common words 2', 'common words 3', 'common words 4','common words 5','common words 6','random words',\
-		'basic words 1','basic words 2','basic words 3','basic words 4','basic words 5','basic words 6']
-		# include_words_list = [0,0,0,0,0,0,0,0,0,0,0,1,0]
-		# include_words_list = [1,1,1,1,1,1,0,0,0,0,0,0,0] #common words all
-		# include_words_list = [1,0,1,0,1,0,0,0,0,0,0,0,0] #common words 1,3,5
-		# include_words_list = [0,1,0,1,0,1,0,0,0,0,0,0,0] #common words 2,4,6
-		# include_words_list = [0,0,0,0,0,0,0,1,1,1,0,0,0] #basic words 1,2,3
-		# include_words_xlist = [1,1,1,1,1,1,0,1,1,1,1,1,1] #all
+		'basic words 1','basic words 2','basic words 3','basic words 4','basic words 5','basic words 6','basic words 7',\
+		'advanced words 1','advanced words 2','advanced words 3']
+		# include_words_list = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]
+		# include_words_list = [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0] #common words all
+		# include_words_list = [1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0] #common words 1,3,5
+		# include_words_list = [0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0] #common words 2,4,6
+		# include_words_list = [0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0] #basic words 1,2,3
+		include_words_list = [1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1] #all
 
 		for word_list in word_lists :
 			if include_words_list[word_lists.index(word_list)] is 1 :

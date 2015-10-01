@@ -110,7 +110,7 @@ def test(_list_,dictionary) :
 
 		else :
 			write_to_review(random_word[0][0])
-			empty_list = [[],'',['']]
+			empty_list = [[],'',[''],['',''],['','',''],['','','',''],['','','','','']]
 			if random_word[3] in empty_list : 
 				print('hint not available')
 			else : 
