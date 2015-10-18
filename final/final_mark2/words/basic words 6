@@ -16,6 +16,8 @@ avert(Verb) :
 1)turn away
 2)prevent (VERT in latin, means TO TURN);
 
+aversion(Noun) : an intense dislike towrads someone or something;
+
 begrudge(Verb) : 
 1)to envy someone, for posessing or enjoying something {he begrudged her happiness}
 2)to give reluctantly {never begrudge the money spent on yourself};

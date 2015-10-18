@@ -20,11 +20,11 @@ platitude(Noun) : a remark, especially one with a moral content, which has been 
 
 aesthetic(Adjective) : concerned with apperciation of external beauty;
 
-preclude(Verb) : to prevent from hapenning (Prevent);
+preclude(Verb) : to prevent from hapenning (Pre --> before | clude --> hapenning --> stop something before it happens --> prevent from hapenning);
 
 inexorable(Adjective) : impossible to prevent (Can not ex-or with);
 
-frivolous(Adjective) : not serious in content/attitude (fri|volous --> free will --> when you are free, you don't take things seriously);
+frivolous(Adjective) : not having any serious purpose or value (fri|volous --> free will --> when you are free, you don't take things seriously);
 
 superfluous(Adjective) : superficial/serving no real purpose, especially due to being in excess;
 
@@ -38,7 +38,7 @@ dogmatic(Adjective) : highly opinionated;
 
 querelous(Adjective) : always complaining;
 
-fortuitous(Adjective) : occuring with happy chance;
+fortuitous(Adjective) : occuring with happy chance (~fortunate);
 
 decorous(Adjective) : characterized by good taste in mannsers and conduct (when you decorate yourself properly --> good manners);
 
@@ -52,7 +52,9 @@ mawkish(Adjective) : overly sentimental, up to the point that it becomes disgust
 
 gainsay(Verb) : speak against (gain|Say --> say against);
 
-incisive(Adjective) : the ability to distinguish between fine points / intelligent, analytical and clear thinking;
+incisive(Adjective) : 
+1)intelligently analytical and clear thinking {a person}
+2)quick and direct;
 
 volubility(Adjective) : the ability of talking and writing easily and continously (volu|bility --> volume + ability);
 
@@ -96,7 +98,7 @@ apathetic(Adjective) : marked by lack of interest/indifference;
 
 exacerbate(Verb) : Make it worse ();
 
-perfidy(Noun) : An act of delibrate betrayal(lacking fidelity --> lacking faithfulness);
+perfidy(Noun) : An act of delibrate betrayal(per fidelity toh hai hi nahi --> lacking fidelity --> lacking faithfulness);
 
 fidelity(Noun) : faithfulness;
 
