@@ -1,6 +1,14 @@
 import pkg_resources
 import __init__
-working_directory = '/Users/ironstein/Documents/projects working directory/GRE/GRE codes/GRE final/final/'
+
+def get_current_working_directory() : 
+	working_directory = __file__.split('/')[:-3]
+	return_working_directory = ''
+	for element in working_directory :
+		return_working_directory += element + '/'
+	return return_working_directory
+
+working_directory = get_current_working_directory()
 __init__.__init__(working_directory)
 import os
 
@@ -33,11 +41,11 @@ def setup() :
 		'basic words 1','basic words 2','basic words 3','basic words 4','basic words 5','basic words 6','basic words 7',\
 		'advanced words 1','advanced words 2','advanced words 3']
 		# include_words_list = [0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0]
-		# include_words_list = [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0] #common words all
+		include_words_list = [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0] #common words all
 		# include_words_list = [1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0] #common words 1,3,5
 		# include_words_list = [0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0] #common words 2,4,6
 		# include_words_list = [0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0] #basic words 1,2,3
-		include_words_list = [1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1] #all
+		# include_words_list = [1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1] #all
 
 		for word_list in word_lists :
 			if include_words_list[word_lists.index(word_list)] is 1 :
@@ -208,6 +216,7 @@ def main() :
 			test(LIST,DICTIONARY)
 		else :
 			print('function not available')
+			print('the only functions avaliable are : dictionary and test',end='\n\n\n')
 			get_input()
 
 	get_input()
